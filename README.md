@@ -1,151 +1,229 @@
-# AFA WEB3TOOL (Airdrop For All)
+# AFA IDENTITY STACK
 
-![AFA WEB3TOOL Banner](public/gambar-frame-utamav2.png)
+**AFA Identity Stack** adalah protokol identitas terdesentralisasi berbasis **Stacks Blockchain**, dirancang sebagai **full-stack identity + NFT + subscription protocol** dengan arsitektur **modular, scalable, secure, dan production-ready**.
 
-**AFA WEB3TOOL** adalah platform Web3 *all-in-one* yang dirancang untuk mempermudah komunitas kripto dalam mengelola airdrop, berinteraksi dengan smart contract, dan berpartisipasi dalam event komunitas. Aplikasi ini dibangun dengan arsitektur modern yang menggabungkan fleksibilitas Web2 dan keamanan Web3.
-
-Platform ini mendukung akses multi-device melalui Web (PWA) dan Android (via Capacitor).
-
-## 🚀 Fitur Utama
-
-### 🛡️ Autentikasi Hybrid
-* **Web3 Login:** Sign-in with Ethereum (SIWE) menggunakan **Wagmi** & **Web3Modal**.
-* **Web2 Login:** Email & Password via Supabase Auth.
-* **Telegram Integration:** Login dan verifikasi via Telegram Mini App data.
-* **Identity System:** Integrasi AFA Identity (NFT/SBT) untuk profil pengguna.
-
-### 💧 Airdrop & Task Management
-* **Airdrop Aggregator:** Daftar airdrop terkini dengan status, kategori, dan panduan.
-* **"Garapanku" (My Work):** Pelacakan status pengerjaan airdrop (Todo, Done, Claimed).
-* **Daily Check-in & Quests:** Sistem poin dan gamifikasi untuk retensi pengguna.
-
-### 💬 Komunitas & Utilitas
-* **Forum Diskusi:** Ruang diskusi real-time untuk pengguna.
-* **Warung Kripto:** Marketplace P2P atau layanan terkait kebutuhan kripto (Gas, e-wallet).
-* **Event System:** Manajemen event, giveaway, dan klaim tiket on-chain.
-
-### ⚙️ Panel Admin
-* Dashboard komprehensif untuk mengelola user, airdrop, banner event, dan verifikasi data.
+Project ini merupakan **Stacks-native protocol** (Clarity smart contracts), yang secara fungsional setara dengan sistem identitas Web3 berbasis EVM, namun dibangun dengan pendekatan **deterministic execution, security-first design, dan Bitcoin-anchored architecture**.
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Overview
 
-### Frontend
-* **Framework:** [React.js](https://reactjs.org/) (Vite)
-* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-* **State Management:** React Hooks & Context API
-* **Navigation:** React Router DOM
-* **Icons:** FontAwesome
+AFA Identity Stack adalah protocol-layer system yang menggabungkan:
+- Identity NFT
+- Subscription system
+- Premium tier model
+- Pricing engine
+- Governance system
+- Verifier system
+- Treasury management
+- Modular architecture
+- Upgrade pattern
+- Full-stack integration
 
-### Web3 Integration
-* **Library:** [Wagmi](https://wagmi.sh/) & [Ethers.js v6](https://docs.ethers.org/)
-* **Wallet Connect:** Web3Modal (Reown)
-* **Contracts:** Solidity ABI integration (Diamond Proxy Pattern support).
-
-### Backend & Infrastructure
-* **BaaS:** [Supabase](https://supabase.com/) (PostgreSQL, Auth, Storage, Realtime).
-* **Serverless:** Supabase Edge Functions (Deno/TypeScript) untuk logika sensitif (Verifikasi Signature Wallet, Telegram Auth).
-* **Mobile:** [Capacitor](https://capacitorjs.com/) (Android Runtime).
+Dirancang untuk **Web3 identity infrastructure**, bukan sekadar smart contract, tetapi sebagai **protocol ecosystem**.
 
 ---
 
-## 📦 Prasyarat
+## ✨ Core Features
 
-Sebelum memulai, pastikan Anda telah menginstal:
-* [Node.js](https://nodejs.org/) (v18+)
-* [Supabase CLI](https://supabase.com/docs/guides/cli) (Untuk deploy Edge Functions)
-* Android Studio (Jika ingin build versi mobile)
+### 🆔 Identity NFT
+- NFT sebagai identitas digital
+- Ownership-based identity model
+- Transferable identity token
+- On-chain identity registry
 
-## 💻 Instalasi & Menjalankan Lokal
+### ⭐ Subscription System
+- Premium tier system
+- Time-based premium expiration
+- Tier-based access control
+- Upgradeable subscription logic
 
-1.  **Clone Repository**
-    ```bash
-    git clone [https://github.com/username/afa-web3tool.git](https://github.com/username/afa-web3tool.git)
-    cd afa-web3tool
-    ```
+### 💰 Pricing Engine
+- Global pricing
+- Tier pricing
+- Dynamic price update
+- On-chain price governance
 
-2.  **Instal Dependencies**
-    ```bash
-    npm install
-    ```
+### 🔐 Security & Governance
+- Owner-based governance
+- Verifier system
+- Nonce system
+- Admin control
+- Treasury withdraw mechanism
+- Upgrade governance flow
 
-3.  **Konfigurasi Environment**
-    Buat file `.env` di root folder dan isi dengan kredensial Anda:
-    ```env
-    VITE_SUPABASE_URL=your_supabase_url
-    VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-    VITE_WALLET_CONNECT_PROJECT_ID=your_reown_project_id
-    ```
+### 🧠 Protocol Architecture
+- Modular contract design
+- Router-based upgrade pattern
+- Registry system
+- Separation of concerns
+- Protocol-grade structure
+- Enterprise-ready layout
 
-4.  **Jalankan Server Development**
-    ```bash
-    npm run dev
-    ```
-    Aplikasi akan berjalan di `http://localhost:5173`.
-
----
-
-## ☁️ Backend (Supabase Edge Functions)
-
-Proyek ini menggunakan Edge Functions untuk keamanan autentikasi wallet. Pastikan Anda telah men-deploy fungsi ini.
-
-1.  **Login Supabase CLI**
-    ```bash
-    npx supabase login
-    ```
-
-2.  **Set Secret Variables (PENTING)**
-    Untuk fungsi `login-with-wallet`, Anda wajib mengatur JWT Secret:
-    ```bash
-    npx supabase secrets set APP_JWT_SECRET=your_super_secret_jwt_string
-    ```
-
-3.  **Deploy Functions**
-    ```bash
-    npx supabase functions deploy login-with-wallet --no-verify-jwt
-    npx supabase functions deploy telegram-auth --no-verify-jwt
-    ```
+### 🌐 Full Stack
+- Smart contracts (Clarity)
+- Test framework
+- Deployment pipeline
+- Frontend (Stacks.js + React)
+- CI structure
+- Production ops layer
+- Security layer
+- Documentation layer
 
 ---
 
-## 📱 Build untuk Android
+## 📁 Project Structure
 
-Aplikasi ini menggunakan Capacitor untuk membungkus aplikasi web menjadi native Android.
-
-1.  **Build Project Web**
-    ```bash
-    npm run build
-    ```
-
-2.  **Sinkronisasi ke Android**
-    ```bash
-    npx cap sync
-    ```
-
-3.  **Buka di Android Studio**
-    ```bash
-    npx cap open android
-    ```
-
----
-
-## 🤝 Kontribusi
-
-Kontribusi selalu diterima! Silakan ikuti langkah berikut:
-
-1.  Fork repository ini.
-2.  Buat branch fitur baru (`git checkout -b fitur-keren`).
-3.  Commit perubahan Anda (`git commit -m 'Menambahkan fitur keren'`).
-4.  Push ke branch (`git push origin fitur-keren`).
-5.  Buat Pull Request.
-
-## 📄 Lisensi
-
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
+```text
+AFA-IDENTITY-STACK/
+├─ contracts/
+│   ├─ core/
+│   ├─ modules/
+│   ├─ admin/
+│   └─ router/
+├─ tests/
+├─ scripts/
+├─ frontend/
+├─ settings/
+├─ security/
+├─ ci/
+├─ docs/
+├─ Clarinet.toml
+├─ README.md
+└─ .env.example
+```
 
 ---
 
-<p align="center">
-  Built with ❤️ by <b>AFA Team</b>
-</p>
+## 🧩 Protocol Modules
+
+| Module | Description |
+|------|-------------|
+| afa-identity-nft | Identity NFT core |
+| afa-approvals | Approval & permission system |
+| afa-registry | Identity registry |
+| afa-subscription | Premium & tier system |
+| afa-pricing | Pricing engine |
+| afa-oracle | Oracle data layer |
+| afa-verifier | Verifier & nonce system |
+| afa-admin | Governance & ownership |
+| afa-withdraw | Treasury management |
+| afa-router | Router / upgrade system |
+
+---
+
+## 🔗 Identity Model
+
+Identity direpresentasikan sebagai **NFT**, di mana:
+- 1 wallet = 1 identity token
+- Identity = ownership
+- Subscription = property dari identity token
+- Premium status = on-chain state
+- Verifikasi = protocol-level logic
+
+---
+
+## 🛠 Development Setup
+
+### Install dependencies
+```bash
+npm install -g @hirosystems/clarinet
+```
+
+### Local development
+```bash
+clarinet integrate
+clarinet test
+```
+
+### Deploy (testnet)
+```bash
+clarinet deploy --network testnet
+```
+
+---
+
+## 🌍 Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Features:
+- Wallet connect
+- Contract interaction
+- Identity mint
+- Subscription upgrade
+- On-chain reads
+- On-chain writes
+
+---
+
+## 🚀 Deployment Flow
+
+### Mainnet deployment
+```bash
+bash scripts/deploy-mainnet.sh
+bash scripts/init-router-mainnet.sh
+```
+
+---
+
+## 🔐 Security Model
+
+- Deterministic execution
+- No reentrancy
+- No infinite loops
+- No delegatecall
+- Modular isolation
+- Explicit state transitions
+- Owner-gated upgrades
+- Router registry control
+- Protocol-level governance
+- Bitcoin-anchored settlement
+
+---
+
+## 🧠 Design Philosophy
+
+- Stacks-native, not EVM port
+- Deterministic smart contracts
+- Modular scalability
+- Upgrade safety
+- Protocol-first design
+- Enterprise-grade structure
+- Security-first approach
+- Long-term maintainability
+- Audit-ready architecture
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+## ⚠️ Disclaimer
+
+This project is a **protocol framework**.
+
+Before mainnet production usage:
+- Security audit required
+- Economic model validation required
+- Governance model finalization required
+- Risk assessment required
+- Production monitoring required
+
+---
+
+## 👤 Maintainer
+
+**AFA Protocol Team**
+
+---
+
+> AFA IDENTITY STACK  
+> Modular • Secure • Scalable • Bitcoin-Anchored • Production-Grade
