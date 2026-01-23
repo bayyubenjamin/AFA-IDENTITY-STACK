@@ -1,0 +1,12 @@
+
+echo "Deploy order:"
+echo "1. afa-admin"
+echo "2. afa-registry"
+echo "3. afa-identity-nft"
+echo "4. afa-approvals"
+echo "5. afa-subscription"
+echo "6. afa-pricing"
+echo "7. afa-oracle"
+echo "8. afa-verifier"
+echo "9. afa-withdraw"
+echo "10. afa-router"

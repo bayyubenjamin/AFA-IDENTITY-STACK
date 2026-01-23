@@ -1,0 +1,16 @@
+
+[project]
+name = "afa-full-protocol"
+description = "AFA Full Identity Protocol - Stacks Native Enterprise"
+
+[contracts]
+afa-identity-nft = "contracts/core/afa-identity-nft.clar"
+afa-approvals = "contracts/core/afa-approvals.clar"
+afa-registry = "contracts/core/afa-registry.clar"
+afa-subscription = "contracts/modules/afa-subscription.clar"
+afa-pricing = "contracts/modules/afa-pricing.clar"
+afa-oracle = "contracts/modules/afa-oracle.clar"
+afa-verifier = "contracts/modules/afa-verifier.clar"
+afa-admin = "contracts/admin/afa-admin.clar"
+afa-withdraw = "contracts/admin/afa-withdraw.clar"
+afa-router = "contracts/router/afa-router.clar"
