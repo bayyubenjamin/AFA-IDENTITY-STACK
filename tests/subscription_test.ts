@@ -1,4 +1,4 @@
-import { Clarinet, Tx, Chain, Account, types } from "https://deno.land/x/clarinet/index.ts"\;
+import { Clarinet, Tx, Chain, Account, types } from "https://deno.land/x/clarinet/index.ts";
 
 Clarinet.test({
   name: "Alur upgrade langganan premium berhasil",
@@ -7,6 +7,7 @@ Clarinet.test({
     let block = chain.mineBlock([
       Tx.contractCall("afa-subscription", "upgradeToPremium", [types.uint(1), types.uint(2)], user.address)
     ]);
+    // Memastikan transaksi menghasilkan respons (ok true)
     block.receipts[0].result.expectOk();
   }
 });
